@@ -13,10 +13,25 @@ body {
 /*Main content section*/
 #main-content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 15px;
   row-gap: 40px;
 }
+@media (max-width: 750px) {
+  #main-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 751px) and (max-width: 999px) {
+  #main-content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1000px) {
+  #main-content {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .thumbnail-row {
   margin-bottom: 15px;
 }
