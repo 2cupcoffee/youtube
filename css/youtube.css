@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  height: 6000px;
+  background-color: rgb(243, 243, 243);
+  padding-top: 80px;
+  padding-left: 25px;
+  padding-right: 25px;
+  transition: padding-left 0.15s ease-in-out;
+}
+/*Main content section*/
+#main-content {
+  display: grid;
+  column-gap: 15px;
+  row-gap: 40px;
+  transition: grid-template-columns 0.15s ease-in-out;
+}
+/*Responsive design*/
+@media (max-width: 500px) {
+  #main-content {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 501px) and (max-width: 750px) {
+  #main-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 751px) and (max-width: 999px) {
+  #main-content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1000px) {
+  #main-content {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.thumbnail-row {
+  margin-bottom: 15px;
+}
+.thumbnail {
+  min-width: 250px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  display: block;
+}
+.video-content {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+.channel-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.video-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  margin-bottom: 10px;
+}
+.video-author {
+  font-size: 12px;
+  color: #606060;
+  margin-bottom: 5px;
+}
+.video-stats {
+  font-size: 12px;
+  color: #606060;
+}
+.video-info a {
+  text-decoration: none;
+  color: black;
+}
